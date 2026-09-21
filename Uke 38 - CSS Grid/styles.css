@@ -14,6 +14,17 @@ body {
 
 /* Header og navigasjon */
 
+.meny ul {
+    display: flex;
+	gap: 20px;
+	list-style: none;
+}
+
+.meny ul a {
+text-decoration: none;
+}
+
+
 header {
 	background-color: #1e3a5f;
 	padding: 2rem 1rem;
@@ -44,6 +55,59 @@ header {
 	}
 }
 
+.knapperad {
+	display: flex;
+	gap: 12px;
+}
+
+.galleri {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 16px;
+}
+
+.bilde {
+	background-color: #9fc5e8;
+	padding: 3rem;
+	text-align: center;
+}
+
+.side-layout {
+	display: grid;
+
+	grid-template-columns: 1fr 3fr 1fr;
+
+	grid-template-areas:
+		"header header header"
+		"nav main aside"
+		"footer footer footer";
+
+	gap: 16px;
+}
+.side-layout header {
+	grid-area: header;
+}
+.side-layout nav {
+	grid-area: nav;
+}
+.side-layout main {
+	grid-area: main;
+}
+.side-layout aside {
+	grid-area: aside;
+}
+.side-layout footer {
+	grid-area: footer;
+}
+.side-layout header,
+.side-layout nav,
+.side-layout main,
+.side-layout aside,
+.side-layout footer {
+	padding: 1.5rem;
+	background-color: #a5bbd5;
+}
+
 /* Hovedinnhold */
 
 main {
@@ -65,6 +129,7 @@ article {
 		color: #1e3a5f;
 	}
 }
+
 
 aside {
 	section {
